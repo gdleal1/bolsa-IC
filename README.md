@@ -8,11 +8,20 @@ A complexidade de dados pode ser medida através do tamanho do menor algoritmo n
 
 **3) Neighborhood measures:** Caracterizam a presença e a densidade de classes iguais ou diferentes nas vizinhanças locais
 
-**4) Network measures:** que extraem informações estruturais do conjunto de dados, modelando-o como um grafo
+**4) Network measures:** Extraem informações estruturais do conjunto de dados, modelando-o como um grafo
 
-**5) Dimensionality measures:** que avaliam a esparsidade dos dados com base no número de amostras relativas à dimensionalidade dos dados
+**5) Dimensionality measures:** Avaliam a esparsidade dos dados com base no número de amostras relativas à dimensionalidade dos dados
 
-**6) Class imbalance measures:** considera a proporção do número de exemplos entre as classes
+**6) Class imbalance measures:** Considera a proporção do número de exemplos entre as classes
 
+----
+ ## Pacotes utilizados:
+ **ECoL:** https://github.com/lpfgarcia/ECoL
+ 
+ **ImbCoL:** https://github.com/victorhb/ImbCoL
+
+---
+ ## Artigos:
+**Paper Lorena:**: https://arxiv.org/pdf/1808.03591
  
 
