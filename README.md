@@ -2,6 +2,9 @@
 A complexidade de dados pode ser medida através do tamanho do menor algoritmo necessário para descrever as relações entre os dados. Se o conjunto possuir uma certa regularidade, por exemplo, é formado um algoritmo mais compacto. Essas medidas podem ser utilizadas para estimar a dificuldade em separar os dados nas suas classes previstas.
 
 # Medidas ECoL
+
+Essas métricas descrevem as regularidades e irregularidades contidas no conjunto de dados:
+
 **1) Featured-based measures:** Caracterizam o quão informativos são os recursos disponíveis para separar as classes
 
 **2) Linearity measures:** Tentar quantificar se as classes podem ser separadas linearmente
