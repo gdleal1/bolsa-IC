@@ -40,7 +40,9 @@ Essas métricas descrevem as regularidades e irregularidades contidas no conjunt
  **ImbCoL:** https://github.com/victorhb/ImbCoL
 
 ---
- ## Artigos:
+ ## Artigos / Textos:
 **Paper Lorena:**: https://arxiv.org/pdf/1808.03591
+
+**Bernouini**: https://rachidbenouini.medium.com/data-complexity-measures-8313e349c7a5
  
 
