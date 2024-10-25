@@ -1,0 +1,12 @@
+Columns:
+
+1. Diagnosis: Binary indicator, representing a diagnosis status (1 for diagnosed, 0 for not).
+2. Sex: Gender of the individual.
+3. Race: Racial or ethnic background of the individual.
+4. Housing: Describes housing stability (e.g., Stable, Unstable).
+5. Delay: Represents whether there's a delay in treatment or services (e.g., Yes, No).
+6. Anhedonia (inability to feel pleasure)
+7. Dep_Mood (depressive mood)
+8. Sleep, Tired, Appetite: Sleep-related and physical symptoms.
+9. Rumination, Concentration, Psychomotor: Cognitive symptoms.
+10. Delusion, Suspicious, Withdrawal, Passive, Tension, Unusual_Thought: Psychiatric symptoms.

@@ -1,0 +1,32 @@
+Dataset Name: intersectional-bias-reduced.csv 
+Number of Instances: 1999 
+Number of Features: 19 
+Sensitive Attribute: Sex
+Number of males: 832 
+Number of females: 1167 
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+          0.972256529           0.071101209           0.279259411 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA           0.145143425                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+          0.903951976                    NA           0.869934967 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA           0.402701351           0.471140433 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+          0.048250775           0.274637319                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+          0.056528264                    NA           0.941970985 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+          0.996985736           0.126869177                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+          0.205602801                    NA           0.148574287 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA           0.009004502           0.007003502 
+    dimensionality.D3            balance.B1            balance.B2 
+          0.777777778           0.020354466           0.054634287 
+           network.G1            network.G2       network.G3.mean 
+          0.893231901           0.381568616           0.769045029 
+        network.G3.sd 
+          0.288288938 
