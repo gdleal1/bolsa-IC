@@ -14,7 +14,7 @@ A complexidade de dados pode ser medida através do tamanho do menor algoritmo n
 
 # Medidas ECoL
 
-Essas métricas descrevem as regularidades e irregularidades contidas no conjunto de dados:
+Essas métricas descrevem as regularidades e irregularidades contidas no conjunto de dados. Quanto mais os valores das métricas aumentam, maior a complexidade do conjunto de dados analisado:
 
 **1) Featured-based measures:** Caracterizam o quão informativos são os atributos disponíveis para separar as classes
 
