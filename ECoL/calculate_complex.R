@@ -8,7 +8,7 @@ devtools::install_github("lpfgarcia/ECoL")
 library("ECoL")
 
 # Reading dataset
-datasetName <- "male-reduced.csv"
+datasetName <- "female-reduced.csv"
 datasetPath <- paste0("datasets/", datasetName)
 dataset <- read.csv(datasetPath)
 
@@ -22,7 +22,7 @@ dataset$Delay <- as.numeric(as.factor(dataset$Delay))
 dataset$Diagnosis <- as.factor(dataset$Diagnosis)
 
 # Calculating the complexity of the dataset and saving the results in a file
-sink(file = "output-male-dataset.txt")
+sink(file = "output-female-dataset.txt")
 cat("Dataset Name:", datasetName, "\n")
 cat("Number of Instances:", nrow(dataset), "\n")
 cat("Number of Features:", ncol(dataset), "\n")
