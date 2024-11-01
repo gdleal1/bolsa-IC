@@ -1,0 +1,30 @@
+Dataset Name: black-reduced.csv 
+Number of Instances: 643 
+Number of Features: 18 
+Target attribute: Diagnosis
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+           0.88612909            0.13341631            0.08305800 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA            0.02159255                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+           0.81648523                    NA            0.53810264 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA            0.17573872            0.43060021 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+           0.05595662            0.09797823                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+           0.01088647                    NA            0.72472784 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+           0.96568622            0.03329919                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+           0.04199067                    NA            0.01399689 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA            0.02643857            0.02177294 
+    dimensionality.D3            balance.B1            balance.B2 
+           0.82352941            0.02743541            0.07283126 
+           network.G1            network.G2       network.G3.mean 
+           0.85855826            0.35242953            0.74171006 
+        network.G3.sd 
+           0.31833247 

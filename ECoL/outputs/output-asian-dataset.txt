@@ -1,30 +1,30 @@
-Dataset Name: female-reduced.csv 
-Number of Instances: 1167 
+Dataset Name: asian-reduced.csv 
+Number of Instances: 310 
 Number of Features: 18 
 Target attribute: Diagnosis
 
 Complexity Measures:
  featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
-           0.91623713            0.12760945            0.10004837 
+           0.92245142            0.06938837            0.12918535 
   featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
-                   NA            0.03123420                    NA 
+                   NA            0.01458699                    NA 
  featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
-           0.88174807                    NA            0.72150814 
+           0.79354839                    NA            0.44193548 
    featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
-                   NA            0.24507284            0.45273642 
+                   NA            0.23870968            0.45014396 
    neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
-           0.04827675            0.15681234                    NA 
+           0.04907517            0.14193548                    NA 
  neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
-           0.01970865                    NA            0.90488432 
+           0.01612903                    NA            0.88064516 
       neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
-           0.99145745            0.05201531                    NA 
+           0.97732570            0.07673489                    NA 
     linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
-           0.06169666                    NA            0.02656384 
+           0.10000000                    NA            0.03870968 
       linearity.L3.sd     dimensionality.D1     dimensionality.D2 
-                   NA            0.01456727            0.01199657 
+                   NA            0.05483871            0.04193548 
     dimensionality.D3            balance.B1            balance.B2 
-           0.82352941            0.02416569            0.06447858 
+           0.76470588            0.01736410            0.04682736 
            network.G1            network.G2       network.G3.mean 
-           0.87383169            0.41441357            0.78272332 
+           0.87904792            0.32899907            0.80331467 
         network.G3.sd 
-           0.22605581 
+           0.22973751 

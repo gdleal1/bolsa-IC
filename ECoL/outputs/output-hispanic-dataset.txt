@@ -1,0 +1,30 @@
+Dataset Name: hispanic-reduced.csv 
+Number of Instances: 298 
+Number of Features: 18 
+Target attribute: Diagnosis
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+          0.924748436           0.070143963           0.117612550 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA           0.023439771                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+          0.818791946                    NA           0.335570470 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA           0.315436242           0.455240914 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+          0.051298576           0.197986577                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+          0.026845638                    NA           0.899328859 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+          0.980034683           0.058779949                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+          0.067114094                    NA           0.036912752 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA           0.057046980           0.043624161 
+    dimensionality.D3            balance.B1            balance.B2 
+          0.764705882           0.009410571           0.025700311 
+           network.G1            network.G2       network.G3.mean 
+          0.880844237           0.358176676           0.781632424 
+        network.G3.sd 
+          0.314361183 

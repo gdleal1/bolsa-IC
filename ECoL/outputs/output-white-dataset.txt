@@ -1,0 +1,30 @@
+Dataset Name: white-reduced.csv 
+Number of Instances: 748 
+Number of Features: 18 
+Target attribute: Diagnosis
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+          0.887790231           0.148484061           0.071599225 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA           0.012934340                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+          0.751336898                    NA           0.423796791 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA           0.156417112           0.438400702 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+          0.046275451           0.102941176                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+          0.005347594                    NA           0.867647059 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+          0.982491635           0.031883373                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+          0.034759358                    NA           0.024064171 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA           0.022727273           0.018716578 
+    dimensionality.D3            balance.B1            balance.B2 
+          0.823529412           0.002497454           0.006896552 
+           network.G1            network.G2       network.G3.mean 
+          0.873859073           0.331220501           0.773829740 
+        network.G3.sd 
+          0.317679842 

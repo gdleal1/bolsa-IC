@@ -8,21 +8,21 @@ devtools::install_github("lpfgarcia/ECoL")
 library("ECoL")
 
 # Reading dataset
-datasetName <- "female-reduced.csv"
+datasetName <- "hispanic-reduced.csv"
 datasetPath <- paste0("datasets/", datasetName)
 dataset <- read.csv(datasetPath)
 
 # Tranform the non-numeric columns to numeric
-dataset$Race <- as.numeric(as.factor(dataset$Race))
+dataset$Sex <- as.numeric(as.factor(dataset$Sex))
 dataset$Housing <- as.numeric(as.factor(dataset$Housing))
 dataset$Delay <- as.numeric(as.factor(dataset$Delay))
-#dataset$Sex <- as.numeric(as.factor(dataset$Sex))
+
 
 # Setting the target attribute
 dataset$Diagnosis <- as.factor(dataset$Diagnosis)
 
 # Calculating the complexity of the dataset and saving the results in a file
-sink(file = "output-female-dataset.txt")
+sink(file = "outputs/output-hispanic-dataset.txt")
 cat("Dataset Name:", datasetName, "\n")
 cat("Number of Instances:", nrow(dataset), "\n")
 cat("Number of Features:", ncol(dataset), "\n")
