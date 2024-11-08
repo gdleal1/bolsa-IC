@@ -1,0 +1,70 @@
+from PreTrainingBias import PreTrainingBias
+import pandas as pd
+
+
+def discretize_sex(x):
+    if x == 'Female':
+        return 0
+    elif x == 'Male':
+        return 1
+    else:
+        raise
+
+def discretize_race(x):
+    if x == 'White':
+        return 1
+    else:
+        return 0
+    
+def discretize_housing(x):
+    if x == 'Stable':
+        return 0
+    elif x == 'Unstable':
+        return 1
+    else:
+        raise
+
+def discretize_delay(x):
+    if x == 'No':
+        return 0
+    elif x == 'Yes':
+        return 1
+    else:
+        raise
+
+def discretize_rumination(x):
+    return round(x, 2)
+
+df = pd.read_csv('/home/gabriel/Documents/bolsa-IC/bolsa-IC/ECoL/datasets/intersectional-bias-reduced.csv')
+df['Sex'] = df['Sex'].apply(lambda x: discretize_sex(x))
+df['Race'] = df['Race'].apply(lambda x: discretize_race(x))
+df['Housing'] = df['Housing'].apply(lambda x: discretize_housing(x))
+df['Delay'] = df['Delay'].apply(lambda x: discretize_delay(x))
+df['Rumination'] = df['Delay'].apply(
+        lambda x: discretize_rumination(x))
+
+ptb = PreTrainingBias()
+
+ci =ptb.class_imbalance(df,"Diagnosis")
+print(f"Class Imbalance: {ci}")
+
+kl_sex = ptb.KL_divergence(df,"Diagnosis","Sex",1)
+print(f'KL Divergence for the protected attribute Sex: {kl_sex}')
+
+kl_race = ptb.KL_divergence(df,"Diagnosis","Race",1)
+print(f'KL Divergence for the protected attribute Race: {kl_race}')
+
+ks_sex = ptb.KS(df,"Diagnosis","Sex",1)
+print(f'KS for the protected attribute Sex: {ks_sex}')
+
+ks_race = ptb.KS(df,"Diagnosis","Race",1)
+print(f'KS for the protected attribute Race: {ks_race}')
+
+cddl_sex = ptb.CDDL(df,"Diagnosis",1,"Sex",1,"Housing")
+print(f'CDDL for the protected attribute Sex: {cddl_sex}')
+
+cddl_race = ptb.CDDL(df,"Diagnosis",1,"Race",1,"Housing")
+print(f'CDDL for the protected attribute Race: {cddl_race}')
+
+
+
