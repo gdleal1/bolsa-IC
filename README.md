@@ -60,5 +60,5 @@ a classes diferentes. Valores altos indicam complexidade maior.
 
 **Bernouini**: https://rachidbenouini.medium.com/data-complexity-measures-8313e349c7a5
 
-Link apresentação:
+**Link apresentação:**
 https://www.canva.com/design/DAGVP26HQbw/GDpqOo9PYhn5ffnQ_vwN6A/edit?utm_content=DAGVP26HQbw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
