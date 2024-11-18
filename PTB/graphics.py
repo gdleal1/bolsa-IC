@@ -3,14 +3,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-NAME_DS1 = 'intersectional-bias'
-NAME_DS2 = 'white'
-TITLE = f'Difference of the complexity measures between {NAME_DS1} and {NAME_DS2} datasets'
+TITLE = "Pre-training metrics for measuring bias"
 
 
 def create():
     
-    file_path = f'outputs_sub/{NAME_DS1}-{NAME_DS2}-diff.csv'  
+    file_path = 'updated_metrics.csv'
     data = pd.read_csv(file_path)
 
     # Different colors for positive and negative values
@@ -18,18 +16,18 @@ def create():
 
     # Bar graphic
     plt.figure(figsize=(10, 6))
-    plt.bar(data['Complexity Measure'], data['Value'], color=colors)
+    plt.bar(data['Metric'], data['Value'], color=colors)
 
     # Line graphic
-    plt.plot(data['Complexity Measure'], data['Value'], color='darkorange', label='Linha')
+    plt.plot(data['Metric'], data['Value'], color='darkorange', label='Linha')
 
     plt.title(TITLE)
-    plt.xlabel('Complexity Measure')
+    plt.xlabel('Metric')
     plt.ylabel('Value')
     plt.xticks(rotation=45)  
     plt.tight_layout()  
 
-    graphic_path = f"graphics/{NAME_DS1}-{NAME_DS2}-diff_graphic.png"
+    graphic_path = f"metrics_graphic.png"
     plt.savefig(graphic_path, dpi=300)
 
 if __name__ == "__main__":
