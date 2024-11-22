@@ -35,7 +35,7 @@ def discretize_delay(x):
 def discretize_rumination(x):
     return round(x, 2)
 
-df = pd.read_csv('/home/gabriel/Documents/bolsa-IC/bolsa-IC/ECoL/datasets/intersectional-bias-reduced.csv')
+df = pd.read_csv('/home/gabriel/Documents/bolsa-IC/bolsa-IC/ECoL/datasets/intersectional-bias.csv')
 df['Sex'] = df['Sex'].apply(lambda x: discretize_sex(x))
 df['Race'] = df['Race'].apply(lambda x: discretize_race(x))
 df['Housing'] = df['Housing'].apply(lambda x: discretize_housing(x))
@@ -60,10 +60,10 @@ print(f'KS for the protected attribute Sex: {ks_sex}')
 ks_race = ptb.KS(df,"Diagnosis","Race",1)
 print(f'KS for the protected attribute Race: {ks_race}')
 
-cddl_sex = ptb.CDDL(df,"Diagnosis",1,"Sex",1,"Housing")
+cddl_sex = ptb.CDDL(df,"Diagnosis",1,"Sex",0,"Rumination")
 print(f'CDDL for the protected attribute Sex: {cddl_sex}')
 
-cddl_race = ptb.CDDL(df,"Diagnosis",1,"Race",1,"Housing")
+cddl_race = ptb.CDDL(df,"Diagnosis",1,"Race",0,"Rumination")
 print(f'CDDL for the protected attribute Race: {cddl_race}')
 
 
