@@ -1,5 +1,4 @@
 # Create a graphic with the complexity measures for a dataset
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -10,7 +9,7 @@ TITLE = f'Difference of the complexity measures between {NAME_DS1} and {NAME_DS2
 
 def create():
     
-    file_path = f'outputs_sub/{NAME_DS1}-{NAME_DS2}-diff.csv'  
+    file_path = f'outputs_diff/{NAME_DS1}-{NAME_DS2}-diff.csv'  
     data = pd.read_csv(file_path)
 
     # Different colors for positive and negative values

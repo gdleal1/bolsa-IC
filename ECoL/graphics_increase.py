@@ -8,7 +8,7 @@ TITLE = f'Increase in complexity measures of the {NAME_DS1} dataset in relation 
 
 def create():
     
-    file_path = f'outputs_div/{NAME_DS1}-{NAME_DS2}-increase.csv'  
+    file_path = f'outputs_increase/{NAME_DS1}-{NAME_DS2}-increase.csv'  
     df_result = pd.read_csv(file_path)
 
     # Order data by the increase percentage

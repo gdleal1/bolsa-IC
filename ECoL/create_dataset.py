@@ -1,55 +1,34 @@
 # Create datasets for experiments, separing them acording to a sensitive attribute
+
 import pandas as pd
 
-def discretize_sex(x):
-    if x == 'Female':
+# Function to discretize the non-numeric columns of the dataset (binary attribute)
+def discretize(x,attr1,attr2=None):
+    if x == attr1:
         return 0
-    elif x == 'Male':
-        return 1
-    else:
-        raise
-
-def discretize_race(x):
-    if x == 'White':
-        return 1
-    else:
-        return 0
-    
-def discretize_housing(x):
-    if x == 'Stable':
-        return 0
-    elif x == 'Unstable':
-        return 1
-    else:
-        raise
-
-def discretize_delay(x):
-    if x == 'No':
-        return 0
-    elif x == 'Yes':
+    elif attr2 == None or x == attr2:
         return 1
     else:
         raise
 
 # Discretize the non-numeric columns of the dataset
 original_dataset = pd.read_csv('datasets/intersectional-bias.csv')
-original_dataset['Sex'] = original_dataset['Sex'].apply(lambda x: discretize_sex(x))
-original_dataset['Race'] = original_dataset['Race'].apply(lambda x: discretize_race(x))
-original_dataset['Housing'] = original_dataset['Housing'].apply(lambda x: discretize_housing(x))
-original_dataset['Delay'] = original_dataset['Delay'].apply(lambda x: discretize_delay(x))
+original_dataset['Sex'] = original_dataset['Sex'].apply(lambda x: discretize(x,'Female','Male'))
+original_dataset['Race'] = original_dataset['Race'].apply(lambda x: discretize(x,'White'))
+original_dataset['Housing'] = original_dataset['Housing'].apply(lambda x: discretize(x,'Stable','Unstable'))
+original_dataset['Delay'] = original_dataset['Delay'].apply(lambda x: discretize(x,'No','Yes'))
 
-# Separate the main dataset  according to the sensitive attribute
+# Separate the original dataset  according to a sensitive attribute
 male_dataset= original_dataset[original_dataset['Sex'] == 1]
 female_dataset = original_dataset[original_dataset['Sex'] == 0]
-nonWhite_dataset = original_dataset[original_dataset['Race'] == 0]
-white_dataset = original_dataset[original_dataset['Race'] == 1]
+nonWhite_dataset = original_dataset[original_dataset['Race'] == 1]
+white_dataset = original_dataset[original_dataset['Race'] == 0]
 
 # Remove the sensitive attribute column of the datasets
 male_dataset = male_dataset.drop(columns=['Sex'])
 female_dataset = female_dataset.drop(columns=['Sex'])
 white_dataset = white_dataset.drop(columns=['Race'])
 nonWhite_dataset = nonWhite_dataset.drop(columns=['Race'])
-
 
 # Save the datasets
 male_dataset.to_csv('datasets/male-discretized.csv', index=False)
