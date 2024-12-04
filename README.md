@@ -19,9 +19,10 @@ Essas métricas descrevem as regularidades e irregularidades contidas no conjunt
 **1) Featured-based measures:** Caracterizam o quão informativos são os atributos disponíveis para separar as classes
 
 1. *Maximum Fisher’s discriminant ratio (F1):* Mede a separabilidade entre classes comparando a diferença média entre as classes com a soma das variâncias intra-classes. Quanto maior ele for, mais parecidas são as classes.
-2. *Volume of overlap region (F2):* Calcula a sobreposição das distribuições dos atributos dentro das classes. Faz isso calculando os valores máximo e mínimo de cada atributo dentro de uma classe e também da região de sobreposição entre as classes. Quanto maior ele for, então maior a sobreposição entre as classes.
-3. *Maximum Individual Feature Efficiency (F3):* Estima a eficiência individual de cada atributo em separar as classes de dados. Permite identificar o atributo que mostra menos overlap entre classes diferentes.
-4. *Collective Feature Efficiency (F4):* Através do atributo mais discriminativo, obtido por F3, separa e retira do dataset todos os exemplos que podem ser distinguidos por ele. Esse processo é repetido até todos os atributos serem considerados ou não existirem mais exemplos a separar. Essa medida indica quantos passos são necessários para discriminar todos os exemplos. Logo, quanto menor for essa medida, um maior número de exemplos podem ser discriminados e, consequentemente, o problema é mais simples. 
+2. *The Directional-vector Maximum Fisher’s Discriminant Ratio (F1v):* Busca encontrar um vetor no espaço dos atributos que melhor separa as classes após a projeção dos dados.
+3. *Volume of overlap region (F2):* Calcula a sobreposição das distribuições dos atributos dentro das classes. Faz isso calculando os valores máximo e mínimo de cada atributo dentro de uma classe e também da região de sobreposição entre as classes. Quanto maior ele for, então maior a sobreposição entre as classes.
+4. *Maximum Individual Feature Efficiency (F3):* Estima a eficiência individual de cada atributo em separar as classes de dados. Permite identificar o atributo que mostra menos overlap entre classes diferentes.
+5. *Collective Feature Efficiency (F4):* Através do atributo mais discriminativo, obtido por F3, separa e retira do dataset todos os exemplos que podem ser distinguidos por ele. Esse processo é repetido até todos os atributos serem considerados ou não existirem mais exemplos a separar. Essa medida indica quantos passos são necessários para discriminar todos os exemplos. Logo, quanto menor for essa medida, um maior número de exemplos podem ser discriminados e, consequentemente, o problema é mais simples. 
 
 **2) Linearity measures:** Tentar quantificar se as classes podem ser separadas linearmente
 
