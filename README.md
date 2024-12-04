@@ -29,6 +29,7 @@ Essas métricas descrevem as regularidades e irregularidades contidas no conjunt
 1. *Sum of the Error Distance by Linear Programming (L1):* Avalia se os dados são linearmente separáveis computando exemplos classificados incorretamente para um limite linear usado em sua classificação. Quanto menor for L1, então
 o problema pode ser considerado mais simples e linearmente separável.
 2. *Error Rate of Linear Classifier (L2):* Mede a separabilidade linear no dataset de treinamento original. Valores altos de L2 denotam mais erros ao separar os dados em suas classes, correspondendo a uma grande complexidade.
+3. *Non-Linearity of a Linear Classifier (L3):* Cria um novo conjunto de dados por meio da interpolação linear de pares de exemplos da mesma classe. Utiliza um classificador linear treinado com dados originais, sendo que sua taxa de erro é medida nos exemplos interpolados.
 
 **3) Neighborhood measures:** Caracterizam a presença e a densidade de classes iguais (overlap) ou diferentes nas vizinhanças locais
 
