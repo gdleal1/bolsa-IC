@@ -36,8 +36,11 @@ o problema pode ser considerado mais simples e linearmente separável.
 1. *Fraction of Borderline Points (N1):* Estima o tamanho e a complexidade do problema de separação de classes através da identificação de pontos críticos no dataset, isto é, dados que são muito parecidos entre eles mas pertencentes
 a classes diferentes. Valores altos indicam complexidade maior.
 2. *Ratio of Intra/Extra Class Nearest Neighbor Distance (N2)*: Computa a distância geral entre exemplos de classes diferentes e a distância total entre exemplos da mesma classe. Se o valor de N2 for baixo, menor a complexidade e maior a distância entre exemplos de classes diferentes em relação a distância entre exemplos da mesma classe.
-3. *Error Rate of the Nearest Neighbor Classifier (N3):* Maiores valores de N3 indicam que muitas instâncias são próximas de instâncias de outras classes.
-4. *Non-Linearity of the Nearest Neighbor Classifier (N4):* Similar a medida L3. Quanto maior, mais complexo o dataset.
+3. *Error Rate of the Nearest Neighbor Classifier (N3):* Avalia a complexidade de um dataset com base na taxa de erro de um classificador 1NN. Maiores valores de N3 indicam que muitas instâncias são próximas de instâncias de outras classes.
+4. *Non-Linearity of the Nearest Neighbor Classifier (N4):* Avalia a não linearidade de um dataset com base no comportamento de um classificador NN. Similar a medida L3. Quanto maior, mais complexo o dataset.
+5. *Fraction of Hyperspheres Covering Data (T1 or N5):* Quantifica a complexidade do dataset com base em como os dados podem ser cobertos por hiperesferas no espaço das características.
+6. *Local Set Average Cardinality (LSC or N6):* Mede a homogeneidade local de um conjunto de dados calculando o número médio de vizinhos próximos que pertencem à mesma classe.
+
 
 **4) Network measures:** Extraem informações estruturais do conjunto de dados, modelando-o como um grafo
 
