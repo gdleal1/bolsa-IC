@@ -58,9 +58,11 @@ a classes diferentes. Valores altos indicam complexidade maior.
 
 ---
  ## Artigos / Textos:
-**Paper Lorena:**: https://arxiv.org/pdf/1808.03591
+**Paper Lorena:** https://arxiv.org/pdf/1808.03591
 
-**Bernouini**: https://rachidbenouini.medium.com/data-complexity-measures-8313e349c7a5
+**Bernouini:** https://rachidbenouini.medium.com/data-complexity-measures-8313e349c7a5
+
+**TCC Diego:** https://lume.ufrgs.br/handle/10183/258017
 
 ---
 ## Conclusões:
