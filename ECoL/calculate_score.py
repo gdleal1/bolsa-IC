@@ -17,8 +17,10 @@ def std_dev(data):
 def score(data):
     return round((mean_absolute(data) + max_absolute(data) + std_dev(data)),2)
 
-NAME_OUTPUT = 'white'
-output_path = f'outputs_complex/output-{NAME_OUTPUT}.csv'  
+
+
+NAME_OUTPUT = 'intersectional-bias'
+output_path = f'outputs/outputs_complex/output-{NAME_OUTPUT}.csv'  
 data = pd.read_csv(output_path)
 
 # Feature-Based Measures
@@ -30,9 +32,23 @@ N_measures = data.iloc[5:11]
 # Linearity Measures
 L_measures = data.iloc[11:14]
 
-with open(f'scores/score-{NAME_OUTPUT}-output.txt', 'w') as f:
-    f.write("Score for Feature-Based Measures: " + str(score(F_measures)) + "\n")
-    f.write("Score for Neighborhood Measures: " + str(score(N_measures)) + "\n")
-    f.write("Score for Linearity Measures: " + str(score(L_measures)) + "\n")
+
+# Calculate scores
+scores = {
+    'Measure Group': ['Feature-Based Measures', 'Neighborhood Measures', 'Linearity Measures'],
+    'Score': [
+        score(F_measures),
+        score(N_measures),
+        score(L_measures),
+    ]
+}
+
+# Create a DataFrame for the scores
+scores_df = pd.DataFrame(scores)
+
+# Save to CSV
+output_csv_path = f'outputs/outputs_score/score-{NAME_OUTPUT}-output.csv'
+scores_df.to_csv(output_csv_path, index=False)
+
 
 

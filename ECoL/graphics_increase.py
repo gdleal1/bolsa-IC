@@ -8,7 +8,7 @@ TITLE = f'Increase in complexity measures of the {NAME_DS1} dataset in relation 
 
 def create():
     
-    file_path = f'outputs_increase/{NAME_DS1}-{NAME_DS2}-increase.csv'  
+    file_path = f'outputs/outputs_increase/{NAME_DS1}-{NAME_DS2}-increase.csv'  
     df_result = pd.read_csv(file_path)
 
     # Order data by the increase percentage
@@ -26,7 +26,7 @@ def create():
     plt.grid(axis='x', linestyle='--', alpha=0.7)
 
     plt.tight_layout()
-    graphic_path = f"graphics/{NAME_DS1}-{NAME_DS2}-increase_graphic.png"
+    graphic_path = f"graphics/graphics_increase/{NAME_DS1}-{NAME_DS2}-increase_graphic.png"
     plt.savefig(graphic_path, dpi=300)
     
 

@@ -9,7 +9,7 @@ TITLE = f'Difference of the complexity measures between {NAME_DS1} and {NAME_DS2
 
 def create():
     
-    file_path = f'outputs_diff/{NAME_DS1}-{NAME_DS2}-diff.csv'  
+    file_path = f'outputs/outputs_diff/{NAME_DS1}-{NAME_DS2}-diff.csv'  
     data = pd.read_csv(file_path)
 
     # Different colors for positive and negative values
@@ -31,7 +31,7 @@ def create():
     plt.xticks(rotation=45)  
     plt.tight_layout()  
 
-    graphic_path = f"graphics/{NAME_DS1}-{NAME_DS2}-diff_graphic.png"
+    graphic_path = f"graphics/graphics_diff/{NAME_DS1}-{NAME_DS2}-diff_graphic.png"
     plt.savefig(graphic_path, dpi=300)
 
 if __name__ == "__main__":

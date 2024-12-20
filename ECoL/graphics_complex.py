@@ -7,7 +7,7 @@ TITLE = f'Complexity measures of the {NAME_DATASET} dataset'
 
 def create():
     
-    file_path = f'outputs_complex/output-{NAME_DATASET}.csv'  
+    file_path = f'outputs/outputs_complex/output-{NAME_DATASET}.csv'  
     data = pd.read_csv(file_path)
 
     # Bar graphic
@@ -23,7 +23,7 @@ def create():
     plt.xticks(rotation=45)  
     plt.tight_layout()  
 
-    graphic_path = f"graphics/{NAME_DATASET}_graphic.png"
+    graphic_path = f"graphics/graphics_complex/{NAME_DATASET}_graphic.png"
     plt.savefig(graphic_path, dpi=300)
 
 if __name__ == "__main__":

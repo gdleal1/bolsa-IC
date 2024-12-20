@@ -1,3 +1,0 @@
-Score for Feature-Based Measures: 2.01
-Score for Neighborhood Measures: 1.81
-Score for Linearity Measures: 0.15
