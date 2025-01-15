@@ -1,0 +1,30 @@
+Dataset Name: adult-discretized.csv 
+Number of Instances: 212 
+Number of Features: 13 
+Target attribute: num
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+           0.87703831            0.09872061            0.18083525 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA            0.34179963                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+           0.95754717                    NA            0.91981132 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA            0.34905660            0.38119813 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+           0.16907946            0.25943396                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+           0.02358491                    NA            0.42924528 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+           0.95934941            0.11232471                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+           0.14622642                    NA            0.08962264 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA            0.05660377            0.01415094 
+    dimensionality.D3            balance.B1            balance.B2 
+           0.25000000            0.02583445            0.06875215 
+           network.G1            network.G2       network.G3.mean 
+           0.86135205            0.43822944            0.84104844 
+        network.G3.sd 
+           0.25301935 

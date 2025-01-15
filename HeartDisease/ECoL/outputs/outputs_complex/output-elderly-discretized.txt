@@ -1,0 +1,30 @@
+Dataset Name: elderly-discretized.csv 
+Number of Instances: 91 
+Number of Features: 13 
+Target attribute: num
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+           0.90230864            0.08142572            0.18326525 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA            0.13743976                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+           0.91208791                    NA            0.82417582 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA            0.46153846            0.42530506 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+           0.14045851            0.32967033                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+           0.04395604                    NA            0.58241758 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+           0.93998309            0.11566581                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+           0.17582418                    NA            0.08791209 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA            0.13186813            0.03296703 
+    dimensionality.D3            balance.B1            balance.B2 
+           0.25000000            0.01968920            0.05290383 
+           network.G1            network.G2       network.G3.mean 
+           0.87130647            0.47444318            0.72044139 
+        network.G3.sd 
+           0.30406223 

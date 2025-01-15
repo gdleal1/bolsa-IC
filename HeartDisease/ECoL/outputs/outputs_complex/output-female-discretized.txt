@@ -1,0 +1,30 @@
+Dataset Name: female-discretized.csv 
+Number of Instances: 97 
+Number of Features: 13 
+Target attribute: num
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+           0.84858687            0.11475903            0.11777873 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA            0.01462880                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+           0.78350515                    NA            0.52577320 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA            0.24742268            0.33233792 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+           0.13648348            0.10309278                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+           0.01030928                    NA            0.32989691 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+           0.84429801            0.07430589                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+           0.08247423                    NA            0.06185567 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA            0.12371134            0.03092784 
+    dimensionality.D3            balance.B1            balance.B2 
+           0.25000000            0.17669546            0.38027199 
+           network.G1            network.G2       network.G3.mean 
+           0.84170962            0.42504322            0.86967480 
+        network.G3.sd 
+           0.26450850 
