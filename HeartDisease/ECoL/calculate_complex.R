@@ -16,7 +16,7 @@ dataset <- read.csv(datasetPath)
 dataset$num <- as.factor(dataset$num)
 
 # Calculating the complexity of the dataset and saving the results in a file
-sink(file = "bolsa-IC\\HeartDisease\\ECoL\\outputs\\outputs_complex\\output-elderly-discretized.txt")
+sink(file = "bolsa-IC\\HeartDisease\\ECoL\\outputs\\outputs_complex\\output-elderly.txt")
 cat("Dataset Name:", datasetName, "\n")
 cat("Number of Instances:", nrow(dataset), "\n")
 cat("Number of Features:", ncol(dataset), "\n")

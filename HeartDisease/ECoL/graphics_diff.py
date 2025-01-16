@@ -2,8 +2,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-NAME_DS1 = 'female'
-NAME_DS2 = 'male'
+NAME_DS1 = 'elderly'
+NAME_DS2 = 'adult'
 TITLE = f'Difference of the complexity measures between {NAME_DS1} and {NAME_DS2} datasets'
 
 
@@ -23,7 +23,7 @@ def create():
     plt.plot(data['Complexity Measure'], data['Value'], color='darkorange', label='Linha')
 
     # Set y-axis limits
-    plt.ylim(-0.15, 0.3)
+    plt.ylim(-0.4, 0.5)
 
     plt.title(TITLE)
     plt.xlabel('Complexity Measure')

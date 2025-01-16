@@ -1,7 +1,7 @@
 # Subtracts the values of the complexity measures of the df1 dataset from the values of the df2 dataset and saves the result in a new CSV file.
 
-NAME_DF1 = 'nonWhite'
-NAME_DF2 = 'white'
+NAME_DF1 = 'elderly'
+NAME_DF2 = 'adult'
 import pandas as pd
 
 df1 = pd.read_csv(f'outputs/outputs_complex/output-{NAME_DF1}.csv')  

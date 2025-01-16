@@ -17,6 +17,7 @@ def create():
     # Line graphic
     plt.plot(data['Complexity Measure'], data['Value'], color='darkorange', label='Linha')
 
+    plt.ylim(0, 1.0)
     plt.title(TITLE)
     plt.xlabel('Complexity Measure')
     plt.ylabel('Value')
