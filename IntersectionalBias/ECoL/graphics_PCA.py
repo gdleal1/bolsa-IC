@@ -6,11 +6,13 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-DATASET = 'female'
+DATASET = 'nonWhite'
 
 def createGraphic2D(feature_columns_scaled, target_column):
     pca = PCA(n_components=2)  # Reduce to 2 dimensions
     feature_columns_pca = pca.fit_transform(feature_columns_scaled)
+    print(f"Variância explicada pelas 2 primeiras componentes principais: {pca.explained_variance_ratio_}")
+    print(f"Variância total explicada pelo PCA 2D: {sum(pca.explained_variance_ratio_):.4f}")
 
     # Graphic representation of the PCA 2D
     plt.figure(figsize=(8, 6))
@@ -69,7 +71,7 @@ scaler = StandardScaler()
 feature_columns_scaled = scaler.fit_transform(feature_columns)
 
 createGraphic2D(feature_columns_scaled, target_column)
-createGraphic3D(feature_columns_scaled, target_column)
+#createGraphic3D(feature_columns_scaled, target_column)
 
 
 
