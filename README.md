@@ -1,52 +1,30 @@
-# Medidas de complexidade de dados
-A complexidade de dados pode ser medida através do tamanho do menor algoritmo necessário para descrever as relações entre os dados. Se o conjunto possuir uma certa regularidade, por exemplo, é formado um algoritmo mais compacto. Essas medidas podem ser utilizadas para estimar a dificuldade em separar os dados nas suas classes previstas.
+# Data Complexity Measures
+Understanding the complexity of a dataset is fundamental to mitigating biases in machine learning models since complexity is directly related to the quality and diversity of the data, as well as the model's ability to generalize without learning biased patterns. The **data complexity measures** used in our study describe the regularities and irregularities contained in a dataset and are used to estimate the difficulty of separating instances into their expected classes. These measures were implemented in a R package called **ECoL**, divided into three groups:
 
-## Palavra chaves
-**1) Instances:** An instance (also known as a sample or observation) represents a single data point in the dataset. For example, in a dataset of houses, each house would be an instance, containing various attributes.
+**1) Featured-based measures:** Describe the level of information provided by the attributes available to distinguish the classes. Includes measures F1, F1v, F2, F3 and F4:
 
-**2) Features:** Features (or attributes) are the individual measurable properties or characteristics of an instance. In the house dataset, features could include the number of bedrooms, square footage, price, location, etc. Features are used as inputs for machine learning models.
+1. *Maximum Fisher’s discriminant ratio (F1):* Measures the separability between classes by comparing the average difference between the classes with the sum of the intra-class variances.
+2. *The Directional-vector Maximum Fisher’s Discriminant Ratio (F1v):* Seeks to find a vector in the space of attributes that best separates the classes after projecting the data.
+3. *Volume of overlap region (F2):* Calculates the overlap of attribute distributions within classes.
+4. *Maximum Individual Feature Efficiency (F3):* Estimates the individual efficiency of each attribute in the separation of data classes. 
+5. *Collective Feature Efficiency (F4):* Quantifies the number of steps needed to separate all the examples in a dataset by iteratively using the most discriminating attributes.
 
-**3) Classes:** Classes (or labels) refer to the categories or outcomes that instances can belong to, particularly in classification tasks. For example, if the dataset is for predicting whether a house is "expensive" or "affordable," those two categories would be the classes.
+**2) Linearity measures:** Evaluates the feasibility of separating classes using a linear approach. Includes measures L1, L2 and L3:
 
-**4) Overlap:** Refers to the degree to which different classes or categories share similar feature values. High class overlap can lead to misclassification, as the model may incorrectly assign an instance to the wrong class based on its features.
+1. *Sum of the Error Distance by Linear Programming (L1):* Evaluates whether the data is linearly separable by computing incorrectly classified examples for a linear threshold used in their classification.
+2. *Error Rate of Linear Classifier (L2):* Measures linear separability in the original training dataset. 
+3. *Non-Linearity of a Linear Classifier (L3):* Creates a new dataset by linearly interpolating pairs of examples from the same class. It uses a linear classifier trained on the original data, and its error rate is measured on the interpolated examples.
 
-**5) Boundary:** Represents the regions in the feature space where instances from different classes meet, and, conceptually, it’s where classification is most challenging.
+**3) Neighborhood measures:**  Characterize the presence and density of equal or different classes in local neighborhoods. Includes measures N1, N2, N3, N4, N5 and N6:
 
-# Medidas ECoL
+1. *Fraction of Borderline Points (N1):* Estimates the size and complexity of the class separation problem by identifying critical points in the data set, i.e., data that are very similar to each other but belong to different classes.
+2. *Ratio of Intra/Extra Class Nearest Neighbor Distance (N2)*: Computes the overall distance between examples of different classes and the total distance between examples of the same class.
+3. *Error Rate of the Nearest Neighbor Classifier (N3):* Evaluates the complexity of a dataset based on the error rate of a 1NN classifier.
+4. *Non-Linearity of the Nearest Neighbor Classifier (N4):* Evaluates the non-linearity of a dataset based on the behavior of a NN classifier.
+5. *Fraction of Hyperspheres Covering Data (T1 or N5):* Quantifies the complexity of the dataset based on how well the data can be covered by hyperspheres in feature space.
+6. *Local Set Average Cardinality (LSC or N6):* Measures the local homogeneity of a dataset by calculating the average number of close neighbors belonging to the same class.
 
-Essas métricas descrevem as regularidades e irregularidades contidas no conjunto de dados. Quanto mais os valores das métricas aumentam, maior a complexidade do conjunto de dados analisado:
-
-**1) Featured-based measures:** Caracterizam o quão informativos são os atributos disponíveis para separar as classes
-
-1. *Maximum Fisher’s discriminant ratio (F1):* Mede a separabilidade entre classes comparando a diferença média entre as classes com a soma das variâncias intra-classes. Quanto maior ele for, mais parecidas são as classes.
-2. *The Directional-vector Maximum Fisher’s Discriminant Ratio (F1v):* Busca encontrar um vetor no espaço dos atributos que melhor separa as classes após a projeção dos dados.
-3. *Volume of overlap region (F2):* Calcula a sobreposição das distribuições dos atributos dentro das classes. Faz isso calculando os valores máximo e mínimo de cada atributo dentro de uma classe e também da região de sobreposição entre as classes. Quanto maior ele for, então maior a sobreposição entre as classes.
-4. *Maximum Individual Feature Efficiency (F3):* Estima a eficiência individual de cada atributo em separar as classes de dados. Permite identificar o atributo que mostra menos overlap entre classes diferentes.
-5. *Collective Feature Efficiency (F4):* Através do atributo mais discriminativo, obtido por F3, separa e retira do dataset todos os exemplos que podem ser distinguidos por ele. Esse processo é repetido até todos os atributos serem considerados ou não existirem mais exemplos a separar. Essa medida indica quantos passos são necessários para discriminar todos os exemplos. Logo, quanto menor for essa medida, um maior número de exemplos podem ser discriminados e, consequentemente, o problema é mais simples. 
-
-**2) Linearity measures:** Tentar quantificar se as classes podem ser separadas linearmente
-
-1. *Sum of the Error Distance by Linear Programming (L1):* Avalia se os dados são linearmente separáveis computando exemplos classificados incorretamente para um limite linear usado em sua classificação. Quanto menor for L1, então
-o problema pode ser considerado mais simples e linearmente separável.
-2. *Error Rate of Linear Classifier (L2):* Mede a separabilidade linear no dataset de treinamento original. Valores altos de L2 denotam mais erros ao separar os dados em suas classes, correspondendo a uma grande complexidade.
-3. *Non-Linearity of a Linear Classifier (L3):* Cria um novo conjunto de dados por meio da interpolação linear de pares de exemplos da mesma classe. Utiliza um classificador linear treinado com dados originais, sendo que sua taxa de erro é medida nos exemplos interpolados.
-
-**3) Neighborhood measures:** Caracterizam a presença e a densidade de classes iguais (overlap) ou diferentes nas vizinhanças locais
-
-1. *Fraction of Borderline Points (N1):* Estima o tamanho e a complexidade do problema de separação de classes através da identificação de pontos críticos no dataset, isto é, dados que são muito parecidos entre eles mas pertencentes
-a classes diferentes. Valores altos indicam complexidade maior.
-2. *Ratio of Intra/Extra Class Nearest Neighbor Distance (N2)*: Computa a distância geral entre exemplos de classes diferentes e a distância total entre exemplos da mesma classe. Se o valor de N2 for baixo, menor a complexidade e maior a distância entre exemplos de classes diferentes em relação a distância entre exemplos da mesma classe.
-3. *Error Rate of the Nearest Neighbor Classifier (N3):* Avalia a complexidade de um dataset com base na taxa de erro de um classificador 1NN. Maiores valores de N3 indicam que muitas instâncias são próximas de instâncias de outras classes.
-4. *Non-Linearity of the Nearest Neighbor Classifier (N4):* Avalia a não linearidade de um dataset com base no comportamento de um classificador NN. Similar a medida L3. Quanto maior, mais complexo o dataset.
-5. *Fraction of Hyperspheres Covering Data (T1 or N5):* Quantifica a complexidade do dataset com base em como os dados podem ser cobertos por hiperesferas no espaço das características.
-6. *Local Set Average Cardinality (LSC or N6):* Mede a homogeneidade local de um conjunto de dados calculando o número médio de vizinhos próximos que pertencem à mesma classe.
-
-
-**4) Network measures:** Extraem informações estruturais do conjunto de dados, modelando-o como um grafo
-
-**5) Dimensionality measures:** Avaliam a esparsidade dos dados com base no número de amostras relativas à dimensionalidade dos dados
-
-**6) Class imbalance measures:** Considera a proporção do número de exemplos entre as classes
+It is important to note that most of these measures vary between 0 and 1. **The closer the value is to the upper limit, the greater the complexity of the dataset analyzed.**
 
 ---
 **Measures in ECoL package:**
@@ -54,20 +32,40 @@ a classes diferentes. Valores altos indicam complexidade maior.
 ![Screenshot from 2024-10-25 09-30-14](https://github.com/user-attachments/assets/47434638-4e4b-4edf-acf4-20952162885b)
 
 ---
- ## Pacotes utilizados:
+ ## Packages used:
  **ECoL:** https://github.com/lpfgarcia/ECoL
  
  **ImbCoL:** https://github.com/victorhb/ImbCoL
 
 ---
- ## Artigos / Textos:
-**Paper Lorena:** https://arxiv.org/pdf/1808.03591
+## References:
+[1] Arruda, J. L., Prudˆencio, R. B., and Lorena, A. C. (2020). Measuring instance hardness
+using data complexity measures. In Intelligent Systems: 9th Brazilian Conference,
+BRACIS 2020, Rio Grande, Brazil, October 20–23, 2020, Proceedings, Part II 9, pages
+483–497. Springer.
 
-**Bernouini:** https://rachidbenouini.medium.com/data-complexity-measures-8313e349c7a5
+[2] Janosi, Andras, S. W. P. M. and Detrano, R. (1989). Heart Disease. UCI Machine Learning
+Repository. DOI: https://doi.org/10.24432/C52P4X.
 
-**TCC Diego:** https://lume.ufrgs.br/handle/10183/258017
+[3] Karamizadeh, S., Abdullah, S. M., Manaf, A. A., Zamani, M., and Hooman, A. (2013).
+An overview of principal component analysis. Journal of signal and information pro-
+cessing, 4(3):173–175.
+
+[4] Lorena, A. C., Garcia, L. P. F., Lehmann, J., Souto, M. C. P., and Ho, T. K. (2019).
+How complex is your classification problem?: A survey on measuring classification
+complexity. ACM Computing Surveys (CSUR), 52(1):1–34.
+
+[5] Maslej, M. et al. (2022). Intersectional-Bias-Assessment. INCF. Available on inter-
+net: https://training.incf.org/lesson/intersectional-approach-model-construction-and-evaluation-mental-healthcare.
+
+
+[6] Rodrigues, D. D. (2023). Assessing pre-training bias in health data and estimating its
+impact on machine learning algorithms.
+
+[7] Sotoca, J. M., S´anchez, J. S., and Mollineda, R. A. (2005). A review of data complexity
+measures and their applicability to pattern classification problems. Actas del III Taller
+Nacional de Mineria de Datos y Aprendizaje. TAMIDA, 77.
 
 ---
-## Conclusões:
-**Link apresentação:**
+## Conclusions:
 https://www.canva.com/design/DAGVP26HQbw/GDpqOo9PYhn5ffnQ_vwN6A/edit?utm_content=DAGVP26HQbw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
