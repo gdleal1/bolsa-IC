@@ -3,7 +3,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-NAME_DATASET = 'intersectional-bias'
+NAME_DATASET = 'adult'
 TITLE = f'Score by measure group for {NAME_DATASET} dataset'
 
 def create():
@@ -15,7 +15,7 @@ def create():
     plt.figure(figsize=(8, 6))
     plt.bar(scores_df['Measure Group'], scores_df['Score'], color=['blue', 'orange', 'green'])
     plt.title(TITLE, fontsize=16)
-    plt.ylim(0, 2.02)
+    plt.ylim(0, 2.05)
     plt.xticks(rotation=45, fontsize=12)
     plt.tight_layout()
 

@@ -19,7 +19,7 @@ def score(data):
 
 
 
-NAME_OUTPUT = 'intersectional-bias'
+NAME_OUTPUT = 'elderly'
 output_path = f'outputs/outputs_complex/output-{NAME_OUTPUT}.csv'  
 data = pd.read_csv(output_path)
 

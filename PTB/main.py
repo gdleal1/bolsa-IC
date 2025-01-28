@@ -35,7 +35,7 @@ def discretize_delay(x):
 def discretize_rumination(x):
     return round(x, 2)
 
-df = pd.read_csv('/home/gabriel/Documents/bolsa-IC/bolsa-IC/ECoL/datasets/intersectional-bias.csv')
+df = pd.read_csv('C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\IntersectionalBias\\ECoL\\datasets\\intersectional-bias.csv')
 df['Sex'] = df['Sex'].apply(lambda x: discretize_sex(x))
 df['Race'] = df['Race'].apply(lambda x: discretize_race(x))
 df['Housing'] = df['Housing'].apply(lambda x: discretize_housing(x))
@@ -45,26 +45,47 @@ df['Rumination'] = df['Delay'].apply(
 
 ptb = PreTrainingBias()
 
-ci =ptb.class_imbalance(df,"Diagnosis")
-print(f"Class Imbalance: {ci}")
+print("\n------------------ INTERSECTIONAL BIAS DATASET ------------------\n")
+ci_sex =ptb.class_imbalance(df,"Sex")
+print(f"Class Imbalance (Sex): {ci_sex}")
 
 kl_sex = ptb.KL_divergence(df,"Diagnosis","Sex",1)
 print(f'KL Divergence for the protected attribute Sex: {kl_sex}')
 
-kl_race = ptb.KL_divergence(df,"Diagnosis","Race",1)
-print(f'KL Divergence for the protected attribute Race: {kl_race}')
-
 ks_sex = ptb.KS(df,"Diagnosis","Sex",1)
 print(f'KS for the protected attribute Sex: {ks_sex}')
 
-ks_race = ptb.KS(df,"Diagnosis","Race",1)
-print(f'KS for the protected attribute Race: {ks_race}')
-
 cddl_sex = ptb.CDDL(df,"Diagnosis",1,"Sex",0,"Rumination")
 print(f'CDDL for the protected attribute Sex: {cddl_sex}')
+
+ci_race =ptb.class_imbalance(df,"Race")
+print(f"Class Imbalance (Race): {ci_race}")
+
+kl_race = ptb.KL_divergence(df,"Diagnosis","Race",1)
+print(f'KL Divergence for the protected attribute Race: {kl_race}')
+
+ks_race = ptb.KS(df,"Diagnosis","Race",1)
+print(f'KS for the protected attribute Race: {ks_race}')
 
 cddl_race = ptb.CDDL(df,"Diagnosis",1,"Race",0,"Rumination")
 print(f'CDDL for the protected attribute Race: {cddl_race}')
 
 
+print("\n------------------ HEART DISEASE DATASET ------------------\n")
+df = pd.read_csv('C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\HeartDisease\\ECoL\\datasets\\heart-disease-discretized.csv')
+ptb = PreTrainingBias()
 
+ci_sex =ptb.class_imbalance(df,"sex")
+print(f"Class Imbalance (Sex): {ci_sex}")
+
+kl_sex = ptb.KL_divergence(df,"num","sex",1)
+print(f'KL Divergence for the protected attribute Sex: {kl_sex}')
+
+ks_sex = ptb.KS(df,"num","sex",1)
+print(f'KS for the protected attribute Sex: {ks_sex}')
+
+cddl_sex_cp = ptb.CDDL(df,"num",1,"sex",1,"cp")
+print(f'CDDL for the protected attribute Sex using cp: {cddl_sex_cp}')
+
+cddl_sex_thal = ptb.CDDL(df,"num",1,"sex",1,"thal")
+print(f'CDDL for the protected attribute Sex using thal: {cddl_sex_thal}')

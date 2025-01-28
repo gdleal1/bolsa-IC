@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-DATASET = 'nonWhite'
+DATASET = 'elderly'
 
 def createGraphic2D(feature_columns_scaled, target_column):
     pca = PCA(n_components=2)  # Reduce to 2 dimensions
@@ -63,8 +63,8 @@ def createGraphic3D(feature_columns_scaled, target_column):
 # Load the dataset
 dataset = pd.read_csv(f"datasets/{DATASET}-discretized.csv")
 
-target_column = dataset.iloc[:, 0].values  # First column (target)
-feature_columns = dataset.iloc[:, 1:].values  # All columns except first (features)
+target_column = dataset.iloc[:, -1].values  # Last column (target)
+feature_columns = dataset.iloc[:, :-1].values  # All columns except last (features)
 
 # Standardize the features to have mean 0 and variance 1.
 scaler = StandardScaler()
