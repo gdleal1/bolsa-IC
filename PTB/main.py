@@ -35,7 +35,7 @@ def discretize_delay(x):
 def discretize_rumination(x):
     return round(x, 2)
 
-df = pd.read_csv('C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\IntersectionalBias\\ECoL\\datasets\\intersectional-bias.csv')
+df = pd.read_csv('..\\IntersectionalBias\\ECoL\\datasets\\intersectional-bias.csv')
 df['Sex'] = df['Sex'].apply(lambda x: discretize_sex(x))
 df['Race'] = df['Race'].apply(lambda x: discretize_race(x))
 df['Housing'] = df['Housing'].apply(lambda x: discretize_housing(x))
@@ -72,7 +72,7 @@ print(f'CDDL for the protected attribute Race: {cddl_race}')
 
 
 print("\n------------------ HEART DISEASE DATASET ------------------\n")
-df = pd.read_csv('C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\HeartDisease\\ECoL\\datasets\\heart-disease-discretized.csv')
+df = pd.read_csv('..\\HeartDisease\\ECoL\\datasets\\heart-disease-discretized.csv')
 ptb = PreTrainingBias()
 
 ci_sex =ptb.class_imbalance(df,"sex")
