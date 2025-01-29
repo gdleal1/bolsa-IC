@@ -15,11 +15,11 @@ Complexity Measures:
    neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
            0.14045851            0.32967033                    NA 
  neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
-           0.04395604                    NA            0.58241758 
+           0.03296703                    NA            0.58241758 
       neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
            0.93998309            0.11566581                    NA 
     linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
-           0.17582418                    NA            0.08791209 
+           0.17582418                    NA            0.04395604 
       linearity.L3.sd     dimensionality.D1     dimensionality.D2 
                    NA            0.13186813            0.03296703 
     dimensionality.D3            balance.B1            balance.B2 

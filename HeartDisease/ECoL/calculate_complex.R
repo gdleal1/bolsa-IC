@@ -8,15 +8,15 @@ devtools::install_github("lpfgarcia/ECoL")
 library("ECoL")
 
 # Reading dataset
-datasetName <- "elderly-discretized.csv"
-datasetPath <- "bolsa-IC\\HeartDisease\\ECoL\\datasets\\elderly-discretized.csv"
+datasetName <- "male-discretized.csv"
+datasetPath <- "bolsa-IC\\HeartDisease\\ECoL\\datasets\\male-discretized.csv"
 dataset <- read.csv(datasetPath)
 
 # Setting the target attribute
 dataset$num <- as.factor(dataset$num)
 
 # Calculating the complexity of the dataset and saving the results in a file
-sink(file = "bolsa-IC\\HeartDisease\\ECoL\\outputs\\outputs_complex\\output-elderly.txt")
+sink(file = "bolsa-IC\\HeartDisease\\ECoL\\outputs\\outputs_complex\\output-male.txt")
 cat("Dataset Name:", datasetName, "\n")
 cat("Number of Instances:", nrow(dataset), "\n")
 cat("Number of Features:", ncol(dataset), "\n")
