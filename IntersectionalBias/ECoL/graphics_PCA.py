@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-DATASET = 'elderly'
+DATASET = 'female'
 
 def createGraphic2D(feature_columns_scaled, target_column):
     pca = PCA(n_components=2)  # Reduce to 2 dimensions
@@ -27,7 +27,7 @@ def createGraphic2D(feature_columns_scaled, target_column):
 
     plt.xlabel("First principal component")
     plt.ylabel("Second principal component")
-    plt.title(f"PCA - Dispersion by classes for {DATASET} dataset")
+    #plt.title(f"PCA - Dispersion by classes for {DATASET} dataset")
     plt.savefig(f'graphics/graphics_PCA/PCA(2D)-{DATASET}.png')  
 
 
@@ -63,8 +63,8 @@ def createGraphic3D(feature_columns_scaled, target_column):
 # Load the dataset
 dataset = pd.read_csv(f"datasets/{DATASET}-discretized.csv")
 
-target_column = dataset.iloc[:, -1].values  # Last column (target)
-feature_columns = dataset.iloc[:, :-1].values  # All columns except last (features)
+target_column = dataset.iloc[:, 0].values  # First column (target)
+feature_columns = dataset.iloc[:, 1:].values  # All columns except first (features)
 
 # Standardize the features to have mean 0 and variance 1.
 scaler = StandardScaler()

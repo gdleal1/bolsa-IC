@@ -10,7 +10,7 @@ TITLE = f'Difference of the complexity measures between {NAME_DS1} and {NAME_DS2
 def create():
     
     file_path = f'outputs/outputs_diff/{NAME_DS1}-{NAME_DS2}-diff.csv'  
-    data = pd.read_csv(file_path)
+    data = (pd.read_csv(file_path)).head(14)
 
     # Different colors for positive and negative values
     colors = ['cornflowerblue' if value > 0 else 'lightcoral' for value in data['Value']]
@@ -25,7 +25,7 @@ def create():
     # Set y-axis limits
     plt.ylim(-0.15, 0.3)
 
-    plt.title(TITLE)
+    #plt.title(TITLE)
     plt.xlabel('Complexity Measure')
     plt.ylabel('Value')
     plt.xticks(rotation=45)  
