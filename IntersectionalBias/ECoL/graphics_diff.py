@@ -25,7 +25,7 @@ def create():
     # Set y-axis limits
     plt.ylim(-0.15, 0.3)
 
-    #plt.title(TITLE)
+    plt.title(TITLE)
     plt.xlabel('Complexity Measure')
     plt.ylabel('Value')
     plt.xticks(rotation=45)  
