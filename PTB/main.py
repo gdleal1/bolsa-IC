@@ -70,22 +70,19 @@ print(f'KS for the protected attribute Race: {ks_race}')
 cddl_race = ptb.CDDL(df,"Diagnosis",1,"Race",0,"Rumination")
 print(f'CDDL for the protected attribute Race: {cddl_race}')
 
-
-print("\n------------------ HEART DISEASE DATASET ------------------\n")
-df = pd.read_csv('..\\HeartDisease\\ECoL\\datasets\\heart-disease-discretized.csv')
+print("\n------------------ INDIAN LIVER PATIENT DATASET ------------------\n")
+df = pd.read_csv('..\\ILPD\\ECoL\\datasets\\ILPD-discretized.csv')
 ptb = PreTrainingBias()
 
-ci_sex =ptb.class_imbalance(df,"sex")
+ci_sex =ptb.class_imbalance(df,"Sex")
 print(f"Class Imbalance (Sex): {ci_sex}")
 
-kl_sex = ptb.KL_divergence(df,"num","sex",1)
+kl_sex = ptb.KL_divergence(df,"Diagnosis","Sex",1)
 print(f'KL Divergence for the protected attribute Sex: {kl_sex}')
 
-ks_sex = ptb.KS(df,"num","sex",1)
+ks_sex = ptb.KS(df,"Diagnosis","Sex",1)
 print(f'KS for the protected attribute Sex: {ks_sex}')
 
-cddl_sex_cp = ptb.CDDL(df,"num",1,"sex",1,"cp")
-print(f'CDDL for the protected attribute Sex using cp: {cddl_sex_cp}')
+cddl_sex_cp = ptb.CDDL(df,"Diagnosis",1,"Sex",1,"Albumin")
+print(f'CDDL for the protected attribute Sex using Albumin: {cddl_sex_cp}')
 
-cddl_sex_thal = ptb.CDDL(df,"num",1,"sex",1,"thal")
-print(f'CDDL for the protected attribute Sex using thal: {cddl_sex_thal}')

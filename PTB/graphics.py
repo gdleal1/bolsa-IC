@@ -8,7 +8,7 @@ TITLE = "Pre-training metrics for measuring bias"
 
 def create():
     
-    file_path = 'metrics-heart.csv'
+    file_path = 'metrics-ILPD.csv'
     data = pd.read_csv(file_path)
 
     # Different colors for positive and negative values
@@ -27,7 +27,7 @@ def create():
     plt.xticks(rotation=45)  
     plt.tight_layout()  
 
-    graphic_path = f"metrics_heart_graphic.png"
+    graphic_path = f"metrics_ILPD_graphic.png"
     plt.savefig(graphic_path, dpi=300)
 
 if __name__ == "__main__":
