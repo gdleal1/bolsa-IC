@@ -12,5 +12,3 @@ df_result['Complexity Measure'] = df1['Complexity Measure']
 df_result['Value'] = df1['Value'] - df2['Value']  
 
 df_result.to_csv(f'outputs/outputs_diff/{NAME_DF1}-{NAME_DF2}-diff.csv', index=False)
-
-

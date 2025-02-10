@@ -36,4 +36,3 @@ female_dataset.to_csv('datasets/female-discretized.csv', index=False)
 white_dataset.to_csv('datasets/white-discretized.csv', index=False)
 nonWhite_dataset.to_csv('datasets/nonWhite-discretized.csv', index=False)
 original_dataset.to_csv('datasets/intersectional-bias-discretized.csv', index=False)
-

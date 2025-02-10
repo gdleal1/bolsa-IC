@@ -49,6 +49,3 @@ scores_df = pd.DataFrame(scores)
 # Save to CSV
 output_csv_path = f'outputs/outputs_score/score-{NAME_OUTPUT}-output.csv'
 scores_df.to_csv(output_csv_path, index=False)
-
-
-

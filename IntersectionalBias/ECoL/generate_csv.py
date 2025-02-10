@@ -54,4 +54,3 @@ with open(csv_path, 'w', newline='') as csvfile:
     
 
         
-
