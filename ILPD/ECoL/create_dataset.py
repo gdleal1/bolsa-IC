@@ -26,4 +26,3 @@ female_dataset = female_dataset.drop(columns=['Sex'])
 male_dataset.to_csv('datasets/male-discretized.csv', index=False)
 female_dataset.to_csv('datasets/female-discretized.csv', index=False)
 original_dataset.to_csv('datasets/ILPD-discretized.csv', index=False)
-
