@@ -19,7 +19,7 @@ def score(data):
 
 
 
-NAME_OUTPUT = 'female'
+NAME_OUTPUT = 'ILPD'
 output_path = f'outputs/outputs_complex/output-{NAME_OUTPUT}.csv'  
 data = pd.read_csv(output_path)
 
@@ -35,7 +35,7 @@ L_measures = data.iloc[11:14]
 
 # Calculate scores
 scores = {
-    'Measure Group': ['Feature-Based Measures', 'Neighborhood Measures', 'Linearity Measures'],
+    'Measure Group': ['Feature-Based', 'Neighborhood', 'Linearity'],
     'Score': [
         score(F_measures),
         score(N_measures),
