@@ -8,20 +8,20 @@ devtools::install_github("lpfgarcia/ECoL")
 library("ECoL")
 
 # Reading dataset
-datasetName <- "teste-male-discretized.csv"
-datasetPath <- "C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\ILPD\\ECoL\\datasets\\teste-male-discretized.csv"
+datasetName <- "female-discretized.csv"
+datasetPath <- "datasets\\female-discretized.csv"
 dataset <- read.csv(datasetPath)
 
 # Setting the target attribute
-dataset$Dataset <- as.factor(dataset$Dataset)
+dataset$Diagnosis <- as.factor(dataset$Diagnosis)
 
 # Calculating the complexity of the dataset and saving the results in a file
-sink(file = "C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\ILPD\\ECoL\\outputs\\outputs_complex\\output-teste-male.txt")
+sink(file = "outputs\\outputs_complex\\output-female.txt")
 cat("Dataset Name:", datasetName, "\n")
 cat("Number of Instances:", nrow(dataset), "\n")
 cat("Number of Features:", ncol(dataset), "\n")
-cat("Target attribute: Dataset\n")
+cat("Target attribute: Diagnosis\n")
 
 cat("\nComplexity Measures:\n")
-complexity_result <- ECoL::complexity(Dataset ~ ., dataset)
+complexity_result <- ECoL::complexity(Diagnosis ~ ., dataset)
 print(complexity_result)
