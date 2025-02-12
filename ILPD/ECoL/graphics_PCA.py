@@ -20,14 +20,14 @@ def createGraphic2D(feature_columns_scaled, target_column):
         plt.scatter(
             feature_columns_pca[target_column == class_id, 0],  # First principal component
             feature_columns_pca[target_column == class_id, 1],  # Second principal component
-            label=f"num {class_id}"
+            label=f"Diagnosis {class_id}"
         )
 
     plt.legend(title="Classes")
 
     plt.xlabel("First principal component")
     plt.ylabel("Second principal component")
-    plt.title(f"PCA - Dispersion by classes for {DATASET} dataset")
+    #plt.title(f"PCA - Dispersion by classes for {DATASET} dataset")
     plt.savefig(f'graphics/graphics_PCA/PCA(2D)-{DATASET}.png')  
 
 
