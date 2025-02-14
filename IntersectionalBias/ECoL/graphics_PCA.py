@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-DATASET = 'nonWhite'
+DATASET = 'white'
 
 def createGraphic2D(feature_columns_scaled, target_column):
     pca = PCA(n_components=2)  # Reduce to 2 dimensions
@@ -27,7 +27,7 @@ def createGraphic2D(feature_columns_scaled, target_column):
 
     plt.xlabel("First principal component")
     plt.ylabel("Second principal component")
-    #plt.title(f"PCA - Dispersion by classes for {DATASET} dataset")
+    plt.title(f"PCA - Dispersion by classes for {DATASET} dataset")
     plt.savefig(f'graphics/graphics_PCA/PCA(2D)-{DATASET}.png')  
 
 
