@@ -1,3 +1,6 @@
+# Abstract
+This study investigates the potential of data complexity measures to identify biases in health datasets that may affect the fairness of machine learning models. Bias in healthcare data can lead to unfair outcomes for vulnerable populations, undermining the integrity and reliability of predictive models in medical applications. Our approach uses data complexity metrics to identify features at risk of introducing bias into model training. We validate our approach by comparing the identified features with traditional pre-training bias metrics, establishing the value of complexity measures as early indicators of bias. This complexity-based bias detection framework can inform bias mitigation strategies, such as feature selection and data reweighting, to improve model fairness in health-related machine learning applications. The results provide insights into using data complexity for bias detection and open pathways to fairer and more transparent predictive models in healthcare.
+
 # Data Complexity Measures
 Understanding the complexity of a dataset is fundamental to mitigating biases in machine learning models since complexity is directly related to the quality and diversity of the data, as well as the model's ability to generalize without learning biased patterns. The **data complexity measures** used in our study describe the regularities and irregularities contained in a dataset and are used to estimate the difficulty of separating instances into their expected classes. These measures were implemented in a R package called **ECoL**, divided into three groups:
 
@@ -26,6 +29,34 @@ Understanding the complexity of a dataset is fundamental to mitigating biases in
 
 It is important to note that most of these measures vary between 0 and 1. **The closer the value is to the upper limit, the greater the complexity of the dataset analyzed.**
 
+# Pre-Training Bias Metrics
+The pre-training bias metrics used in this work consider for the calculation a demographic attribute that has
+two values: One represents the group favored by the bias, i.e. the over-represented or
+advantaged group. The other value represents the group disfavored by the bias, i.e. the
+underrepresented or disadvantaged group. For example, if the attribute is sex, the favored
+group is male and the disfavored group is female. These metrics are as follows:
+
+**1) Class Imbalance (CI):** Measures the imbalance in the distribution of instances
+between the groups of the demographic attribute considered. The values vary
+between -1 and 1, with positive values indicating that instances of the favored
+group have greater representation than the disadvantaged.
+
+**2) Kullback-Leibler (KL) Divergence:** Measures the difference between label dis-
+tributions (target attribute) for the groups of the demographic attribute considered.
+The range of values for this metric is between 0 and ∞, with values close to zero
+meaning that the different values for the target attribute are similarly distributed.
+
+**3) Kolmogorov-Smirnov (KS):** Measures the maximum divergence between labels
+in the distribution for the groups of the demographic attribute considered. The
+values vary between 0 and 1, with values close to zero indicating that the target
+attribute is more evenly distributed between the groups.
+
+**5) Conditional Demographic Disparity in Labels (CDDL):** Evaluates demo-
+graphic disparity by checking whether the target attribute is independent of the
+demographic attribute considered. The values vary between -1 and 1, with pos-
+itive values indicating demographic disparity and negative values suggesting the
+opposite.
+
 ---
 **Measures in ECoL package:**
 
@@ -35,37 +66,39 @@ It is important to note that most of these measures vary between 0 and 1. **The 
  ## Packages used:
  **ECoL:** https://github.com/lpfgarcia/ECoL
  
- **ImbCoL:** https://github.com/victorhb/ImbCoL
+---
+
+# Conclusion
+This study demonstrated that data complexity measures can be used as indicators of groups favored by bias in a dataset. In the Intersectional-Bias Dataset, the difference in complexity between the disadvantaged and advantaged groups was evident from the calculation of scores and pre-training metrics. Both the female and non-white groups proved to be the most negatively affected in the overall context of the dataset. Nevertheless, in the Indian Liver Patient Dataset, the increase in scores for the disadvantaged class did not occur in all complexity groups, and the pre-training bias metrics were not high. However, as the results show, this dataset is not free of bias that favors the male group.
+
+The conclusions reached in this work contribute to the current context of machine learning models and data classification. By calculating the complexity of subsets of data divided according to a protected attribute and comparing the results with pre-training bias metrics, it can be seen that this new approach can be used to obtain fairer results in the health scenario.
 
 ---
-## References:
-[1] Arruda, J. L., Prudˆencio, R. B., and Lorena, A. C. (2020). Measuring instance hardness
-using data complexity measures. In Intelligent Systems: 9th Brazilian Conference,
-BRACIS 2020, Rio Grande, Brazil, October 20–23, 2020, Proceedings, Part II 9, pages
-483–497. Springer.
+# References:
+[1] [Arruda et al. 2020] Arruda, J. L., Prudˆencio, R. B., and Lorena, A. C. (2020). Measur-
+ing instance hardness using data complexity measures. In Intelligent Systems: 9th
+Brazilian Conference, BRACIS 2020, Rio Grande, Brazil, October 20–23, 2020, Pro-
+ceedings, Part II 9, pages 483–497. Springer.
 
-[2] Janosi, Andras, S. W. P. M. and Detrano, R. (1989). Heart Disease. UCI Machine Learning
-Repository. DOI: https://doi.org/10.24432/C52P4X.
+[2] [Karamizadeh et al. 2013] Karamizadeh, S., Abdullah, S. M., Manaf, A. A., Zamani, M.,
+and Hooman, A. (2013). An overview of principal component analysis. Journal of
+signal and information processing, 4(3):173–175.
 
-[3] Karamizadeh, S., Abdullah, S. M., Manaf, A. A., Zamani, M., and Hooman, A. (2013).
-An overview of principal component analysis. Journal of signal and information pro-
-cessing, 4(3):173–175.
+[3] [Lorena et al. 2019] Lorena, A. C., Garcia, L. P. F., Lehmann, J., Souto, M. C. P., and Ho,
+T. K. (2019). How complex is your classification problem?: A survey on measuring
+classification complexity. ACM Computing Surveys (CSUR), 52(1):1–34.
 
-[4] Lorena, A. C., Garcia, L. P. F., Lehmann, J., Souto, M. C. P., and Ho, T. K. (2019).
-How complex is your classification problem?: A survey on measuring classification
-complexity. ACM Computing Surveys (CSUR), 52(1):1–34.
-
-[5] Maslej, M. et al. (2022). Intersectional-Bias-Assessment. INCF. Available on inter-
-net: https://training.incf.org/lesson/intersectional-approach-model-construction-and-evaluation-mental-healthcare.
+[4] [Maslej et al. 2022] Maslej, M. et al. (2022). Intersectional-Bias-Assessment. INCF.
+Available on internet: https://training.incf.org/lesson/intersectional-approach-model-construction-and-evaluation-mental-healthcare.
 
 
-[6] Rodrigues, D. D. (2023). Assessing pre-training bias in health data and estimating its
-impact on machine learning algorithms.
+[5] [Ramana and Venkateswarlu 2022] Ramana, B. and Venkateswarlu, N. (2022). ILPD
+(Indian Liver Patient Dataset). UCI Machine Learning Repository. DOI:
+https://doi.org/10.24432/C5D02C.
 
-[7] Sotoca, J. M., S´anchez, J. S., and Mollineda, R. A. (2005). A review of data complexity
-measures and their applicability to pattern classification problems. Actas del III Taller
-Nacional de Mineria de Datos y Aprendizaje. TAMIDA, 77.
+[6] [Rodrigues 2023] Rodrigues, D. D. (2023). Assessing pre-training bias in health data and
+estimating its impact on machine learning algorithms.
 
----
-## Conclusions:
-https://www.canva.com/design/DAGVP26HQbw/GDpqOo9PYhn5ffnQ_vwN6A/edit?utm_content=DAGVP26HQbw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+[7] [Sotoca et al. 2005] Sotoca, J. M., S´anchez, J. S., and Mollineda, R. A. (2005). A review
+of data complexity measures and their applicability to pattern classification problems.
+Actas del III Taller Nacional de Mineria de Datos y Aprendizaje. TAMIDA, 77.
