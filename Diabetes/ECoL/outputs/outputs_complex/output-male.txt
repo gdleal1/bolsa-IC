@@ -1,0 +1,30 @@
+Dataset Name: male.csv 
+Number of Instances: 5484 
+Number of Features: 21 
+Target attribute: Diabetes_binary
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+         0.9585533073          0.0450799982          0.3668156871 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA          0.8625000000                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+         0.9996353027                    NA          0.9996353027 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA          0.4894237783          0.4433687039 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+         0.1671808480          0.3393508388                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+         0.0966447848                    NA          0.5950036470 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+         0.9991565544          0.1491999403                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+         0.2507293946                    NA          0.2060539752 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA          0.0036469730          0.0007293946 
+    dimensionality.D3            balance.B1            balance.B2 
+         0.2000000000          0.0016977876          0.0046943753 
+           network.G1            network.G2       network.G3.mean 
+         0.8762713688          0.5023356392          0.8129786842 
+        network.G3.sd 
+         0.2183138760 

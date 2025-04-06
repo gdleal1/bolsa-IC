@@ -1,0 +1,30 @@
+Dataset Name: diabetes-reduced.csv 
+Number of Instances: 12000 
+Number of Features: 22 
+Target attribute: Diabetes_binary
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+         0.9561581697          0.0495987938          0.3479982159 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA          0.9186046512                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+         0.9996666667                    NA          0.9996666667 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA          0.4790833333          0.4393823490 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+         0.1658026357          0.3356666667                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+         0.0952500000                    NA          0.5945833333 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+         0.9995104028          0.1472867902                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+         0.2445000000                    NA          0.2004166667 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA          0.0017500000          0.0003333333 
+    dimensionality.D3            balance.B1            balance.B2 
+         0.1904761905          0.0000000000          0.0000000000 
+           network.G1            network.G2       network.G3.mean 
+         0.8755349196          0.5061540130          0.8045969238 
+        network.G3.sd 
+         0.2292912541 
