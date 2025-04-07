@@ -1,3 +1,5 @@
+# Reduce a dataset to a smaller size while maintaining the proportions of predetermined attributes attributes
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
@@ -29,19 +31,26 @@ sampled_df = sampled_df.reset_index(drop=True)
 sampled_df.to_csv('datasets/diabetes-reduced.csv', index=False)
 
 
-print("\n------------------ Proporções nos datasets ------------------\n")
-porcentagem_diabetes = df['Diabetes_binary'].value_counts(normalize=True) * 100
-print("\nPorcentagem de Diabetes_binary (original):")
+print("\n==================== Proporções nos datasets ====================\n")
+print("\n------------------ ORIGINAL ------------------")
+combinacoes_originais = df[['Diabetes_binary', 'Sex']].value_counts(normalize=True) * 100
+print(combinacoes_originais.sort_index())
+"""porcentagem_diabetes = df['Diabetes_binary'].value_counts(normalize=True) * 100
+print("\nPorcentagem de Diabetes_binary:")
 print(porcentagem_diabetes)
 
 porcentagem_sex = df['Sex'].value_counts(normalize=True) * 100
-print("\nPorcentagem de Sex (original):")
-print(porcentagem_sex)
+print("\nPorcentagem de Sex:")
+print(porcentagem_sex)"""
 
-porcentagem_diabetes = sampled_df['Diabetes_binary'].value_counts(normalize=True) * 100
-print("\nPorcentagem de Diabetes_binary (amostrado):")
+
+print("\n------------------ REDUZIDO ------------------")
+combinacoes_reduzidas = sampled_df[['Diabetes_binary', 'Sex']].value_counts(normalize=True) * 100
+print(combinacoes_reduzidas.sort_index())
+"""porcentagem_diabetes = sampled_df['Diabetes_binary'].value_counts(normalize=True) * 100
+print("\nPorcentagem de Diabetes_binary:")
 print(porcentagem_diabetes)
 
 porcentagem_sex = sampled_df['Sex'].value_counts(normalize=True) * 100
-print("\nPorcentagem de Sex (amostrado):")
-print(porcentagem_sex)
+print("\nPorcentagem de Sex:")
+print(porcentagem_sex)"""

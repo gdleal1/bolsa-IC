@@ -2,8 +2,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-NAME_DS1 = 'male'
-NAME_DS2 = 'female'
+NAME_DS1 = 'diabetes'
+NAME_DS2 = 'male'
 TITLE = f'Difference of the complexity measures between {NAME_DS1} and {NAME_DS2} datasets'
 
 

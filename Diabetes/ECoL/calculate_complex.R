@@ -9,14 +9,14 @@ library("ECoL")
 
 # Reading dataset
 datasetName <- "male.csv"
-datasetPath <- "C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\Diabetes\\ECoL\\datasets\\male.csv"
+datasetPath <- "datasets\\male.csv"
 dataset <- read.csv(datasetPath)
 
 # Setting the target attribute
 dataset$Diabetes_binary <- as.factor(dataset$Diabetes_binary)
 
 # Calculating the complexity of the dataset and saving the results in a file
-sink(file = "C:\\Users\\gleal\\OneDrive\\Área de Trabalho\\bolsa-IC\\bolsa-IC\\Diabetes\\ECoL\\outputs\\outputs_complex\\output-male.txt")
+sink(file = "outputs\\outputs_complex\\output-male.txt")
 cat("Dataset Name:", datasetName, "\n")
 cat("Number of Instances:", nrow(dataset), "\n")
 cat("Number of Features:", ncol(dataset), "\n")
