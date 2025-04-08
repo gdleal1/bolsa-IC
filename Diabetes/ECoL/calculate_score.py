@@ -19,7 +19,7 @@ def score(data):
 
 
 
-NAME_OUTPUT = 'diabetes'
+NAME_OUTPUT = 'female-Un'
 output_path = f'outputs/outputs_complex/output-{NAME_OUTPUT}.csv'  
 data = pd.read_csv(output_path)
 

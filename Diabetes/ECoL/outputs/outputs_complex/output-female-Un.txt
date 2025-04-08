@@ -1,0 +1,30 @@
+Dataset Name: female-Un.csv 
+Number of Instances: 6714 
+Number of Features: 21 
+Target attribute: Diabetes_binary
+
+Complexity Measures:
+ featurebased.F1.mean    featurebased.F1.sd featurebased.F1v.mean 
+           0.97340014            0.02716803            0.33913887 
+  featurebased.F1v.sd  featurebased.F2.mean    featurebased.F2.sd 
+                   NA            0.62650602                    NA 
+ featurebased.F3.mean    featurebased.F3.sd  featurebased.F4.mean 
+           0.99627644                    NA            0.99553172 
+   featurebased.F4.sd       neighborhood.N1  neighborhood.N2.mean 
+                   NA            0.26198987            0.34056294 
+   neighborhood.N2.sd  neighborhood.N3.mean    neighborhood.N3.sd 
+           0.18437836            0.18290140                    NA 
+ neighborhood.N4.mean    neighborhood.N4.sd       neighborhood.N5 
+           0.05034257                    NA            0.35895144 
+      neighborhood.N6     linearity.L1.mean       linearity.L1.sd 
+           0.99308901            0.11470737                    NA 
+    linearity.L2.mean       linearity.L2.sd     linearity.L3.mean 
+           0.12957998                    NA            0.13285672 
+      linearity.L3.sd     dimensionality.D1     dimensionality.D2 
+                   NA            0.00297885            0.00059577 
+    dimensionality.D3            balance.B1            balance.B2 
+           0.20000000            0.44371484            0.70871434 
+           network.G1            network.G2       network.G3.mean 
+           0.81852510            0.51332646            0.52073525 
+        network.G3.sd 
+           0.20485500 

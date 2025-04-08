@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 
-df = pd.read_csv("datasets/diabetes-original.csv")
+df = pd.read_csv("datasets/diabetes-original-Un.csv")
 
 # Group by two attributes 
 grouped = df.groupby(['Diabetes_binary', 'Sex'])
@@ -28,7 +28,7 @@ sampled_df = grouped.apply(
 sampled_df = sampled_df.reset_index(drop=True)
 
 # Save the sampled dataset
-sampled_df.to_csv('datasets/diabetes-reduced.csv', index=False)
+sampled_df.to_csv('datasets/diabetes-reduced-Un.csv', index=False)
 
 
 print("\n==================== Proporções nos datasets ====================\n")

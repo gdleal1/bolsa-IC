@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 
 # Define the names of the CSV files and their respective labels
 datasets = {
-    "outputs/outputs_score/score-diabetes-output.csv": "Original",
-    "outputs/outputs_score/score-female-output.csv": "Female",
-    "outputs/outputs_score/score-male-output.csv": "Male"
+    "outputs/outputs_score/score-diabetes-Un-output.csv": "Original",
+    "outputs/outputs_score/score-female-Un-output.csv": "Female",
+    "outputs/outputs_score/score-male-Un-output.csv": "Male"
 }
 
 # Create a dictionary to store the scores
@@ -33,7 +33,7 @@ legend = plt.legend(title="Dataset", loc="upper center", bbox_to_anchor=(0.5, -0
 plt.xticks(rotation=0)
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.tight_layout()
-plt.savefig("graphics\\graphics_scores\\original-female-male-compare.png")
+plt.savefig("graphics/graphics_scores/original-female-male-Un-compare.png")
 
 
 

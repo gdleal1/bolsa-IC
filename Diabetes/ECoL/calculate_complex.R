@@ -8,15 +8,15 @@ devtools::install_github("lpfgarcia/ECoL")
 library("ECoL")
 
 # Reading dataset
-datasetName <- "male.csv"
-datasetPath <- "datasets\\male.csv"
+datasetName <- "female-Un.csv"
+datasetPath <- "/home/gabriel/Documents/bolsa-IC/bolsa-IC/Diabetes/ECoL/datasets/female-Un.csv"
 dataset <- read.csv(datasetPath)
 
 # Setting the target attribute
 dataset$Diabetes_binary <- as.factor(dataset$Diabetes_binary)
 
 # Calculating the complexity of the dataset and saving the results in a file
-sink(file = "outputs\\outputs_complex\\output-male.txt")
+sink(file = "/home/gabriel/Documents/bolsa-IC/bolsa-IC/Diabetes/ECoL/outputs/outputs_complex/output-female-Un.txt")
 cat("Dataset Name:", datasetName, "\n")
 cat("Number of Instances:", nrow(dataset), "\n")
 cat("Number of Features:", ncol(dataset), "\n")

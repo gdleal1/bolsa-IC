@@ -2,7 +2,7 @@
 
 import csv
 
-txt_path = 'outputs/outputs_complex/output-female.txt'
+txt_path = 'outputs/outputs_complex/output-diabetes-Un.txt'
 
 # Read the text file
 with open(txt_path, 'r') as file:
@@ -42,7 +42,7 @@ for i in range(len(list_names)):
     complexity_measures.append((name_parts[1], list_values[i]))
 
 
-csv_path = 'outputs/outputs_complex/output-female.csv'
+csv_path = 'outputs/outputs_complex/output-diabetes-Un.csv'
 
 with open(csv_path, 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
