@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 
 # Define the names of the CSV files and their respective labels
 datasets = {
-    "outputs/outputs_complex/output-diabetes.csv": "Original",
-    "outputs/outputs_complex/output-female.csv": "Female",
-    "outputs/outputs_complex/output-male.csv": "Male"
+    "outputs/outputs_complex/output-diabetes-Un.csv": "Original",
+    "outputs/outputs_complex/output-female-Un.csv": "Female",
+    "outputs/outputs_complex/output-male-Un.csv": "Male"
 }
 
 # Create a dictionary to store the complexity measure data
@@ -33,4 +33,4 @@ legend = plt.legend(title="Dataset", loc="upper center", bbox_to_anchor=(0.5, -0
 plt.xticks(rotation=45)
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.tight_layout()
-plt.savefig("graphics\\graphics_compare\\original-female-male.png")
+plt.savefig("graphics/graphics_compare/original-female-male-Un.png")

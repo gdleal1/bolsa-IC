@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-NAME_DATASET = 'diabetes'
+NAME_DATASET = 'male-Un'
 TITLE = f'Complexity measures of the {NAME_DATASET} dataset'
 
 def create():

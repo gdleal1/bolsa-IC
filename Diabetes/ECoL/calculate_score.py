@@ -18,8 +18,9 @@ def score(data):
     return round((mean_absolute(data) + max_absolute(data) + std_dev(data)),2)
 
 
+# Pesos sugeridos: 0.5, 0.3, 0.2
 
-NAME_OUTPUT = 'female-Un'
+NAME_OUTPUT = 'male-Un'
 output_path = f'outputs/outputs_complex/output-{NAME_OUTPUT}.csv'  
 data = pd.read_csv(output_path)
 
